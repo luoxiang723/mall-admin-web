@@ -298,6 +298,26 @@ export const asyncRouterMap = [
     meta: {title: '权限', icon: 'ums'},
     children: [
       {
+        path: 'supplier',
+        name: 'supplier',
+        component: () => import('@/views/ums/supplier/index'),
+        meta: {title: '供应商列表', icon: 'ums-supplier'}
+      },
+      {
+        path: 'addSupplier',
+        name: 'addSupplier',
+        component: () => import('@/views/ums/supplier/add'),
+        meta: {title: '添加供应商'},
+        hidden: true
+      },
+      {
+        path: 'updateSupplier',
+        name: 'updateSupplier',
+        component: () => import('@/views/ums/supplier/update'),
+        meta: {title: '修改供应商'},
+        hidden: true
+      },
+      {
         path: 'admin',
         name: 'admin',
         component: () => import('@/views/ums/admin/index'),
